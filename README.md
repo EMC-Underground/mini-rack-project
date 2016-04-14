@@ -31,20 +31,30 @@
   + VLAN 13 - 192.168.13.0/24 - CloudFoundry Private Network
 
 ## Order of Install
-- External Subnet
-- RackHD - BareMetal
-- Puppet - Baremetal
-- Windows AD w/ DNS, DHCP, PXE boot redirect - Baremetal via Puppet and RackHD
-- Integrate AD into Puppet
-- 2 ESXi Hosts with the SDC installed
-- VCSA
-- Migrate AD to VM
-- Migrate RackHD to VM
-- Migrate Puppet to VM
-- 3rd ESXi host with the SDC installed
-- ScaleIO
-- CloudFoundry
-- Jenkins
-- Deploy labapi
-- Deploy hubot
-- Deploy hubot packages
+- ### External Subnet
+The script should use the external subnet given for all north-south traffic
+
+
+- ### Core Services
+  - RackHD - BareMetal
+  - Puppet - Baremetal
+  - Windows AD w/ DNS, DHCP, PXE boot redirect - Baremetal via Puppet and RackHD
+  - Integrate AD into Puppet
+
+
+- ### VMware components
+  - 2 ESXi Hosts with the SDC installed
+  - VCSA
+  - Migrate AD to VM
+  - Migrate RackHD to VM
+  - Migrate Puppet to VM
+  - 3rd ESXi host with the SDC installed
+
+
+- ### Final Core Tech  
+  - ScaleIO
+  - CloudFoundry
+  - Jenkins
+  - Deploy labapi
+  - Deploy hubot
+  - Deploy hubot packages
